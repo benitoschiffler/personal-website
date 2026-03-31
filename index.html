@@ -3,274 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proposed Partnership: Bennett Schiff</title>
-    <meta name="description" content="A formal proposal for mutual benefit, significant revenue upside, and at least one very good hire.">
+    <title>Bennett Schiff | Come On In</title>
+    <meta name="description" content="An interactive personal site for Bennett Schiff. Open the door, explore the rooms, and get a feel for how he thinks and builds.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="grain"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
 
-    <!-- NAV -->
-    <nav id="nav">
-        <a href="#cover" class="nav-logo">BS</a>
-        <ul class="nav-links">
-            <li><a href="#summary">1.0</a></li>
-            <li><a href="#proof">2.0</a></li>
-            <li><a href="#record">3.0</a></li>
-            <li><a href="#terms">4.0</a></li>
-            <li><a href="#risk">5.0</a></li>
-            <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-            <span></span><span></span>
+    <div class="portal" id="portal" aria-hidden="false">
+        <div class="portal-copy">
+            <p class="eyebrow">Personal site / experiential version</p>
+            <p class="portal-note">This works best if you tap the door instead of reading an intro paragraph about it.</p>
+        </div>
+        <button class="door-button" id="doorButton" aria-label="Open the door to Bennett Schiff's website">
+            <span class="door-frame">
+                <span class="door-panel left"></span>
+                <span class="door-panel right"></span>
+                <span class="door-center">
+                    <span class="door-label">Open the door</span>
+                    <span class="door-sub">Enter Bennett's internet house</span>
+                </span>
+            </span>
+        </button>
+    </div>
+
+    <nav class="site-nav" id="siteNav">
+        <a href="#landing" class="brand">BS</a>
+        <div class="nav-links">
+            <a href="#rooms">Rooms</a>
+            <a href="#signals">Signals</a>
+            <a href="#story">Story</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
         </button>
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#summary" class="mob-link">1.0 — Executive Summary</a>
-        <a href="#proof" class="mob-link">2.0 — Proof of Concept</a>
-        <a href="#record" class="mob-link">3.0 — Track Record</a>
-        <a href="#terms" class="mob-link">4.0 — Proposed Terms</a>
-        <a href="#risk" class="mob-link">5.0 — Risk Assessment</a>
-        <a href="#contact" class="mob-link">6.0 — Next Steps</a>
+        <a href="#landing" class="mob-link">Landing</a>
+        <a href="#rooms" class="mob-link">Rooms</a>
+        <a href="#signals" class="mob-link">Signals</a>
+        <a href="#story" class="mob-link">Story</a>
+        <a href="#contact" class="mob-link">Contact</a>
     </div>
 
-    <!-- COVER -->
-    <section id="cover">
-        <div class="cover-inner">
-            <p class="cover-label">Proposed Partnership</p>
-            <div class="cover-rule"></div>
-            <h1 class="cover-name" id="heroName">
-                <span class="word"><span class="wi">BENNETT</span></span>
-                <span class="word"><span class="wi">SCHIFF</span></span>
-            </h1>
-            <div class="cover-rule"></div>
-            <p class="cover-sub">
-                A proposal for mutual benefit, significant revenue upside,<br>
-                and at least one very good hire.
-            </p>
-            <div class="cover-cta">
-                <a href="#summary" class="btn-primary">Read the Proposal</a>
-                <a href="#contact" class="btn-secondary">Skip to the Ask →</a>
-            </div>
-            <p class="cover-meta">Philadelphia, PA &nbsp;·&nbsp; Partnership Development &nbsp;·&nbsp; Built with AI, filed under "creative outreach"</p>
-        </div>
-        <div class="cover-scroll">↓</div>
-    </section>
-
-    <!-- 1.0 EXECUTIVE SUMMARY -->
-    <section id="summary" class="doc-section">
-        <div class="doc-inner">
-            <div class="sec-bg-num">1</div>
-            <p class="sec-label">1.0 &mdash; Executive Summary</p>
-            <blockquote class="pull-quote">
-                "I build partnerships. I've done it for 6 years.<br>
-                The results have been excellent.<br>
-                <em>This document makes the case for doing it for you next.</em>"
-            </blockquote>
-            <div class="summary-body reveal">
-                <p>My name is Bennett Schiff. I'm a Partnership Development Manager based in Philadelphia. For the last 6+ years I've been at AIME Group, where I built their vendor program from nothing into a $2M annual revenue stream — writing every contract, running every campaign, and closing every deal along the way.</p>
-                <p>I'm good at making people want to work together. It's both my job title and, frankly, a personality trait. I'm currently exploring what doing that looks like somewhere new.</p>
-                <p>If you're reading this, you were probably sent a link. Or you found it yourself, which is somehow more impressive. Either way — welcome. Let's get into it.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2.0 PROOF OF CONCEPT -->
-    <section id="proof" class="doc-section alt">
-        <div class="doc-inner">
-            <div class="sec-bg-num">2</div>
-            <p class="sec-label">2.0 &mdash; Proof of Concept</p>
-            <p class="sec-intro reveal">The following results were collected during a 6-year trial period at AIME Group. Methodology: relationships, persistence, and an unreasonable belief that every deal is closable.</p>
-            <div class="stats-grid reveal">
-                <div class="stat-block">
-                    <div class="stat-num">$2M<span class="stat-sup">+</span></div>
-                    <div class="stat-desc">Annual revenue generated through vendor partnerships and affiliate marketing. Started at zero. (Literally zero. There was no program.)</div>
-                </div>
-                <div class="stat-block">
-                    <div class="stat-num">45</div>
-                    <div class="stat-desc">Active vendor partnerships built, each with negotiated terms, revenue share arrangements, or five-figure commitments.</div>
-                </div>
-                <div class="stat-block">
-                    <div class="stat-num">$550K<span class="stat-sup">+</span></div>
-                    <div class="stat-desc">Generated per annual conference in exhibitor sales and sponsorships. Per event. Every year.</div>
-                </div>
-                <div class="stat-block">
-                    <div class="stat-num">125<span class="stat-sup">+</span></div>
-                    <div class="stat-desc">New leads delivered per partner in their first year, through campaigns I wrote, designed, and deployed myself.</div>
+    <main>
+        <section class="landing" id="landing">
+            <div class="landing-copy reveal">
+                <p class="eyebrow">Welcome inside</p>
+                <h1>Bennett Schiff builds momentum for a living.</h1>
+                <p class="landing-text">
+                    I did not want a website that reads like a cover letter wearing nicer shoes.
+                    I wanted something a little weirder, warmer, and more memorable. So this is less
+                    "here are my bullet points" and more "walk around, click things, get a feel for me."
+                </p>
+                <div class="landing-actions">
+                    <a href="#rooms" class="btn btn-primary">Explore the rooms</a>
+                    <a href="#contact" class="btn btn-secondary">Skip to contact</a>
                 </div>
             </div>
-            <p class="stat-footnote reveal">* All figures auditable. References available. Results not typical, but fully replicable given the right opportunity.</p>
-        </div>
-    </section>
 
-    <!-- 3.0 TRACK RECORD -->
-    <section id="record" class="doc-section">
-        <div class="doc-inner">
-            <div class="sec-bg-num">3</div>
-            <p class="sec-label">3.0 &mdash; Track Record</p>
-            <p class="sec-intro reveal">A brief history. Relevant experience highlighted. Irrelevant hobbies omitted.</p>
+            <div class="scene-card reveal">
+                <p class="scene-kicker">Current operating mode</p>
+                <div class="scene-line"><span>Role energy</span><strong>Partnerships, growth, builder brain</strong></div>
+                <div class="scene-line"><span>Base of operations</span><strong>Philadelphia, PA</strong></div>
+                <div class="scene-line"><span>Reputation</span><strong>Turns "we should do something" into revenue</strong></div>
+                <div class="scene-line"><span>Site thesis</span><strong>Fun first, resume second</strong></div>
+            </div>
 
-            <div class="record-item reveal">
-                <div class="record-head">
+            <div class="landing-orbit" aria-hidden="true">
+                <span class="orbit-ring ring-a"></span>
+                <span class="orbit-ring ring-b"></span>
+                <span class="orbit-ring ring-c"></span>
+            </div>
+        </section>
+
+        <section class="section rooms-section" id="rooms">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Four rooms, four signals</p>
+                <h2>If you want the vibe quickly, start here.</h2>
+                <p>Each room is a more human version of what would normally be a resume section.</p>
+            </div>
+
+            <div class="rooms-grid">
+                <article class="room-card reveal tilt-card" data-tilt-card>
+                    <p class="room-index">01</p>
+                    <h3>The Deal Room</h3>
+                    <p>I like finding overlap, shaping the story, and getting two sides excited to work together.</p>
+                    <ul>
+                        <li>Built a vendor program from zero to $2M+ annual revenue</li>
+                        <li>Closed sponsorships, partnerships, and affiliate campaigns</li>
+                        <li>Persistently follows up without becoming a menace</li>
+                    </ul>
+                </article>
+
+                <article class="room-card reveal tilt-card" data-tilt-card>
+                    <p class="room-index">02</p>
+                    <h3>The Builder Room</h3>
+                    <p>I am happiest when someone hands me a blank page and says, "Can you make this real?"</p>
+                    <ul>
+                        <li>Writes the process while building the program</li>
+                        <li>Comfortable owning strategy and the messy execution layer</li>
+                        <li>Will absolutely make the follow-up system better</li>
+                    </ul>
+                </article>
+
+                <article class="room-card reveal tilt-card" data-tilt-card>
+                    <p class="room-index">03</p>
+                    <h3>The Systems Room</h3>
+                    <p>Partnerships are people work, but they break if the backend is chaos. I like fixing both.</p>
+                    <ul>
+                        <li>Salesforce lead when that became necessary</li>
+                        <li>QA, operations, and process tuning experience</li>
+                        <li>Uses AI to delete repetitive admin work from existence</li>
+                    </ul>
+                </article>
+
+                <article class="room-card reveal tilt-card" data-tilt-card>
+                    <p class="room-index">04</p>
+                    <h3>The Wildcard Room</h3>
+                    <p>I value good taste, humor, and making things more delightful than they strictly need to be.</p>
+                    <ul>
+                        <li>Built this instead of sending another bland site</li>
+                        <li>Likes concept-driven outreach and memorable experiences</li>
+                        <li>Probably overthinks typography in a healthy way</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section signals-section" id="signals">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Live signals</p>
+                <h2>The numbers are still here. They just live in a better room now.</h2>
+            </div>
+
+            <div class="signal-board reveal">
+                <div class="signal-tile">
+                    <span class="signal-value" data-count="2000000" data-prefix="$" data-suffix="+">$0</span>
+                    <span class="signal-label">grown into annual vendor revenue</span>
+                </div>
+                <div class="signal-tile">
+                    <span class="signal-value" data-count="45">0</span>
+                    <span class="signal-label">active vendor partnerships built</span>
+                </div>
+                <div class="signal-tile">
+                    <span class="signal-value" data-count="550000" data-prefix="$" data-suffix="+">$0</span>
+                    <span class="signal-label">generated per annual conference</span>
+                </div>
+                <div class="signal-tile">
+                    <span class="signal-value" data-count="125" data-suffix="+">0</span>
+                    <span class="signal-label">new leads delivered per partner in year one</span>
+                </div>
+            </div>
+
+            <div class="control-panel reveal">
+                <div class="panel-copy">
+                    <p class="eyebrow">Atmosphere controls</p>
+                    <h3>Change the mood of the house.</h3>
+                    <p>This does not improve my qualifications, but it does make the site feel alive, which is the point.</p>
+                </div>
+                <div class="theme-switches" role="group" aria-label="Color theme controls">
+                    <button class="theme-switch active" data-theme="sunset">Sunset</button>
+                    <button class="theme-switch" data-theme="aurora">Aurora</button>
+                    <button class="theme-switch" data-theme="nightshift">Night Shift</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section story-section" id="story">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Breadcrumb trail</p>
+                <h2>A quick path through the things that shaped how I work.</h2>
+            </div>
+
+            <div class="story-line">
+                <article class="story-stop reveal">
+                    <span class="story-year">2018</span>
                     <div>
-                        <div class="record-co">AIME Group</div>
-                        <div class="record-role">Partnership Development Manager <span class="record-note">(promoted from Coordinator, 2022)</span></div>
+                        <h3>ARIVE</h3>
+                        <p>Worked across QA, product support, and launch operations for a fintech platform rolling out to 1,000+ mortgage brokers.</p>
                     </div>
-                    <div class="record-date">2019 — Present</div>
-                </div>
-                <p class="record-body">Joined as coordinator. Built the vendor program from scratch. Wrote the contracts, ran the campaigns, managed the conferences, closed the deals. By the time I was done, there were 45 vendor partners, $2M in annual revenue, and a membership program that hadn't existed before I got there. I also served as the internal Salesforce lead, which wasn't in the job description but became the job description anyway. The program ran well. The numbers speak for themselves — see Section 2.0.</p>
-            </div>
+                </article>
 
-            <div class="record-item reveal">
-                <div class="record-head">
+                <article class="story-stop reveal">
+                    <span class="story-year">2019</span>
                     <div>
-                        <div class="record-co">ARIVE</div>
-                        <div class="record-role">Business Analyst</div>
+                        <h3>AIME Group</h3>
+                        <p>Joined in a coordinator role, then kept saying yes to bigger problems until the work expanded into partnerships, systems, campaigns, and revenue growth.</p>
                     </div>
-                    <div class="record-date">2018 — 2019</div>
-                </div>
-                <p class="record-body">Helped launch a fintech platform to 1,000+ mortgage brokers. Led QA across the full product — CRM, loan origination, pricing engine. Also provided live support when things went sideways, navigating Kibana logs to diagnose errors in real time. Platform launched on schedule. Millions in loan volume processed. Good times.</p>
-            </div>
+                </article>
 
-            <div class="record-item reveal edu">
-                <div class="record-head">
+                <article class="story-stop reveal">
+                    <span class="story-year">2022</span>
                     <div>
-                        <div class="record-co">Drexel University</div>
-                        <div class="record-role">BS, Sport Management &nbsp;·&nbsp; Business Administration &nbsp;·&nbsp; Marketing</div>
+                        <h3>Promotion and scale</h3>
+                        <p>Formal title caught up with the job: Partnership Development Manager. Vendor program, contracts, campaigns, conferences, partner growth, all in motion.</p>
                     </div>
-                    <div class="record-date">Philadelphia, PA</div>
+                </article>
+
+                <article class="story-stop reveal">
+                    <span class="story-year">Now</span>
+                    <div>
+                        <h3>Looking for the next build</h3>
+                        <p>I’m most excited by roles where relationships, creativity, and commercial thinking actually matter and where there’s room to make something bigger than what existed before.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="contact-panel reveal">
+                <p class="eyebrow">Knock, knock</p>
+                <h2>If this felt like the kind of energy your team could use, let’s talk.</h2>
+                <p>
+                    Open to partnership development, business development, and strategic growth roles.
+                    Also open to conversations that start with, "This role isn't exactly that, but I think you'd like it."
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:BennettSchiff820@gmail.com" class="contact-link">BennettSchiff820@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/Bennett-Schiff" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- 4.0 PROPOSED TERMS -->
-    <section id="terms" class="doc-section alt">
-        <div class="doc-inner">
-            <div class="sec-bg-num">4</div>
-            <p class="sec-label">4.0 &mdash; Proposed Terms</p>
-            <p class="sec-intro reveal">What I'm looking for in our arrangement. Non-binding, open to negotiation, but firm on the spirit of each clause.</p>
-            <div class="terms-list reveal">
-                <div class="term">
-                    <span class="term-num">§ 1</span>
-                    <div class="term-body">
-                        <div class="term-title">Competitive Compensation</div>
-                        <div class="term-text">I've negotiated enough contracts to know my market rate. I'll come to this conversation prepared, which you should find encouraging rather than alarming.</div>
-                    </div>
-                </div>
-                <div class="term">
-                    <span class="term-num">§ 2</span>
-                    <div class="term-body">
-                        <div class="term-title">A Blank Canvas (Preferred)</div>
-                        <div class="term-text">I built AIME's program from zero. I work best when handed a mandate and left to figure out how to execute it. Existing programs are fine. Nonexistent ones are exciting.</div>
-                    </div>
-                </div>
-                <div class="term">
-                    <span class="term-num">§ 3</span>
-                    <div class="term-body">
-                        <div class="term-title">Partnerships Taken Seriously</div>
-                        <div class="term-text">Not as an afterthought. Not as "we do some sponsorships sometimes." If your organization views partnerships as a real revenue lever, we'll get along great. If not — I'll change that. It's what I do.</div>
-                    </div>
-                </div>
-                <div class="term">
-                    <span class="term-num">§ 4</span>
-                    <div class="term-body">
-                        <div class="term-title">Room to Grow</div>
-                        <div class="term-text">Give me a year and check the numbers. That's been the arrangement everywhere I've worked and it's gone well for everyone involved.</div>
-                    </div>
-                </div>
-                <div class="term">
-                    <span class="term-num">§ 5</span>
-                    <div class="term-body">
-                        <div class="term-title">Credit When the Revenue Lands</div>
-                        <div class="term-text">It will land. I just want it noted in writing — or at least in a Slack message — that I called it.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5.0 RISK ASSESSMENT -->
-    <section id="risk" class="doc-section">
-        <div class="doc-inner">
-            <div class="sec-bg-num">5</div>
-            <p class="sec-label">5.0 &mdash; Risk Assessment</p>
-            <p class="sec-intro reveal">In the interest of full transparency, the following risks have been identified. Parties are encouraged to review before proceeding.</p>
-            <div class="risk-table reveal">
-                <div class="risk-header">
-                    <span>Risk</span>
-                    <span>Likelihood</span>
-                    <span>Notes</span>
-                </div>
-                <div class="risk-row">
-                    <span class="risk-item">Will immediately audit your partnership program</span>
-                    <span class="risk-level certain">Certain</span>
-                    <span class="risk-note">Findings will be actionable</span>
-                </div>
-                <div class="risk-row">
-                    <span class="risk-item">Will send follow-up emails</span>
-                    <span class="risk-level certain">Certain</span>
-                    <span class="risk-note">Multiple. Politely persistent.</span>
-                </div>
-                <div class="risk-row">
-                    <span class="risk-item">Will redesign the vendor onboarding process</span>
-                    <span class="risk-level high">High</span>
-                    <span class="risk-note">Revenue will follow</span>
-                </div>
-                <div class="risk-row">
-                    <span class="risk-item">Will use AI to do 3 hours of admin in 20 minutes</span>
-                    <span class="risk-level high">Already Happening</span>
-                    <span class="risk-note">This is fine</span>
-                </div>
-                <div class="risk-row">
-                    <span class="risk-item">Will become overly invested in partner success</span>
-                    <span class="risk-level moderate">Moderate</span>
-                    <span class="risk-note">Actually the whole point</span>
-                </div>
-                <div class="risk-row">
-                    <span class="risk-item">Will negotiate a better deal than expected</span>
-                    <span class="risk-level moderate">Likely</span>
-                    <span class="risk-note">Depends which side you're on</span>
-                </div>
-                <div class="risk-row highlight">
-                    <span class="risk-item">Built an entire website instead of sending a PDF</span>
-                    <span class="risk-level done">Complete</span>
-                    <span class="risk-note">You're reading it</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6.0 NEXT STEPS -->
-    <section id="contact" class="doc-section contact-section">
-        <div class="doc-inner">
-            <p class="sec-label light">6.0 &mdash; Next Steps</p>
-            <h2 class="contact-hl reveal">
-                If you've made it this far<br>without closing the tab,<br>
-                <em>that's statistically significant.</em>
-            </h2>
-            <p class="contact-sub reveal">Open to partnership development, business development, and strategic growth roles. I'm easy to reach, quick to respond, and already drafting a follow-up.</p>
-            <div class="contact-links reveal">
-                <a href="mailto:BennettSchiff820@gmail.com" class="contact-link">
-                    <span class="cl-label">Email</span>
-                    <span class="cl-val">BennettSchiff820@gmail.com →</span>
-                </a>
-                <a href="https://www.linkedin.com/in/Bennett-Schiff" target="_blank" rel="noopener" class="contact-link">
-                    <span class="cl-label">LinkedIn</span>
-                    <span class="cl-val">linkedin.com/in/Bennett-Schiff →</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="foot-inner">
-            <span>© 2025 Bennett Schiff</span>
-            <span>CONFIDENTIAL — FOR RECRUITING PURPOSES ONLY — NOT LEGALLY BINDING (BUT ALSO, CALL ME)</span>
-        </div>
+    <footer class="site-footer">
+        <p>Designed as an experience, not a document.</p>
+        <p>© 2026 Bennett Schiff</p>
     </footer>
 
     <script src="script.js"></script>
