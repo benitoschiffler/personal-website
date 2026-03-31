@@ -3,227 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bennett Schiff — Partnership Development</title>
-    <meta name="description" content="Bennett Schiff is a Partnership Development Manager based in Philadelphia, PA — building revenue-generating partnerships, marketing strategy, and business growth.">
+    <title>BENNETT SCHIFF // PARTNERSHIP DEV</title>
+    <meta name="description" content="Bennett Schiff — Partnership Development Manager. $2M revenue. 45 vendor partnerships. Built this with AI.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- ===== NAVIGATION ===== -->
+    <div id="toast-container" aria-live="polite"></div>
+
     <nav id="nav">
-        <a href="#hero" class="nav-logo">BS</a>
+        <a href="#hero" class="nav-logo"><span class="bracket">[</span>BS<span class="bracket">]</span></a>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact" class="nav-cta">Contact</a></li>
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#quests">Quest Log</a></li>
+            <li><a href="#skills">Skill Tree</a></li>
+            <li><a href="#contact" class="nav-hire">HIRE ME</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
+            <span></span><span></span>
         </button>
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#about" class="mobile-link">About</a>
-        <a href="#experience" class="mobile-link">Experience</a>
-        <a href="#skills" class="mobile-link">Skills</a>
-        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="#stats" class="mob-link">Stats</a>
+        <a href="#achievements" class="mob-link">Achievements</a>
+        <a href="#quests" class="mob-link">Quest Log</a>
+        <a href="#skills" class="mob-link">Skill Tree</a>
+        <a href="#contact" class="mob-link">Hire Me</a>
     </div>
 
-    <!-- ===== HERO ===== -->
     <section id="hero">
+        <div class="grid-bg" aria-hidden="true"></div>
         <div class="hero-inner">
-            <p class="hero-eyebrow">Partnership Development Manager &nbsp;·&nbsp; Philadelphia, PA</p>
-            <h1 class="hero-name">
-                <span class="word"><span class="wi">Bennett</span></span>
-                <span class="word"><span class="wi">Schiff.</span></span>
+            <div class="status-bar">
+                <div class="status-pill green"><span class="pulse-dot"></span>AVAILABLE FOR HIRE</div>
+                <div class="status-pill"><span class="mono">▸</span> PHILADELPHIA, PA</div>
+                <div class="status-pill"><span class="mono">▸</span> LVL 6 · PARTNERSHIP DEV</div>
+            </div>
+            <h1 class="hero-name" id="heroName">
+                <span class="word"><span class="wi">BENNETT</span></span>
+                <span class="word"><span class="wi">SCHIFF.</span></span>
             </h1>
-            <p class="hero-desc">
-                Building revenue from relationships — $2M in annual partnerships,
-                40+ vendor programs, and campaigns that consistently convert.
+            <p class="hero-tagline"><span class="mono">// </span>Partnership Development Manager</p>
+            <p class="hero-sub">
+                6 years. $2M in revenue. 45 vendor partnerships.<br>
+                <strong>0 PDFs attached. I built this instead.</strong>
             </p>
             <div class="hero-cta">
-                <a href="#experience" class="btn btn-dark">View My Work</a>
-                <a href="mailto:BennettSchiff820@gmail.com" class="btn btn-outline">Get in Touch</a>
+                <a href="#stats" class="btn-start"><span>▶</span>&nbsp; VIEW PROFILE</a>
+                <a href="mailto:BennettSchiff820@gmail.com" class="btn-ghost">CONTACT</a>
             </div>
         </div>
-        <div class="hero-scroll">
-            <div class="scroll-dot"></div>
+        <div class="hero-hint" aria-hidden="true">
+            <span class="mono hint-text">SCROLL TO EXPLORE</span>
+            <div class="hint-arrow">↓</div>
         </div>
     </section>
 
-    <!-- ===== STATS BAND ===== -->
     <section id="stats">
-        <div class="stats-inner">
-            <div class="stat">
-                <div class="stat-num">$2M<span class="stat-plus">+</span></div>
-                <div class="stat-label">Annual Revenue Generated</div>
-            </div>
-            <div class="stat-rule"></div>
-            <div class="stat">
-                <div class="stat-num">45<span class="stat-plus"></span></div>
-                <div class="stat-label">Active Vendor Partners</div>
-            </div>
-            <div class="stat-rule"></div>
-            <div class="stat">
-                <div class="stat-num">$550K<span class="stat-plus">+</span></div>
-                <div class="stat-label">Per-Conference Sponsorship</div>
-            </div>
-            <div class="stat-rule"></div>
-            <div class="stat">
-                <div class="stat-num">125<span class="stat-plus">+</span></div>
-                <div class="stat-label">Leads per Partner, Year One</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ABOUT ===== -->
-    <section id="about">
-        <div class="about-inner reveal">
-            <div class="eyebrow">About</div>
-            <div class="about-grid">
-                <h2 class="about-hl">Turning<br>relationships<br>into revenue.</h2>
-                <div class="about-body">
-                    <p>I'm a Partnership Development Manager with 6+ years of experience building and scaling vendor partnership programs. At <strong>AIME Group</strong>, I built their vendor program from the ground up — growing it to 45 partners and a <strong>$2M annual revenue stream</strong> through affiliate marketing and sponsorships.</p>
-                    <p>My work spans the full deal cycle: contract negotiation and redlining, B2B marketing strategy, event sponsorship sales, CRM operations, and long-term partner retention. I don't just close partnerships — I build programs that scale.</p>
-                    <p>BS in Sport Management from <strong>Drexel University</strong>, with minors in Business Administration and Marketing.</p>
-                    <a href="mailto:BennettSchiff820@gmail.com" class="text-link">Open to new opportunities &rarr;</a>
+        <div class="sec-inner">
+            <p class="eyebrow mono">// PLAYER STATS</p>
+            <div class="hud-grid">
+                <div class="hud-card reveal">
+                    <div class="corner tl"></div><div class="corner br"></div>
+                    <div class="hud-icon">💰</div>
+                    <div class="hud-num" data-target="2" data-prefix="$" data-suffix="M+">$0</div>
+                    <div class="hud-label">ANNUAL REVENUE GENERATED</div>
+                    <div class="hud-track"><div class="hud-fill" data-w="98"></div></div>
+                </div>
+                <div class="hud-card reveal">
+                    <div class="corner tl"></div><div class="corner br"></div>
+                    <div class="hud-icon">🤝</div>
+                    <div class="hud-num" data-target="45" data-prefix="" data-suffix="">0</div>
+                    <div class="hud-label">VENDOR PARTNERSHIPS BUILT</div>
+                    <div class="hud-track"><div class="hud-fill" data-w="90"></div></div>
+                </div>
+                <div class="hud-card reveal">
+                    <div class="corner tl"></div><div class="corner br"></div>
+                    <div class="hud-icon">🎤</div>
+                    <div class="hud-num" data-target="550" data-prefix="$" data-suffix="K+">$0</div>
+                    <div class="hud-label">PER-CONFERENCE SPONSORSHIP</div>
+                    <div class="hud-track"><div class="hud-fill" data-w="82"></div></div>
+                </div>
+                <div class="hud-card reveal">
+                    <div class="corner tl"></div><div class="corner br"></div>
+                    <div class="hud-icon">📈</div>
+                    <div class="hud-num" data-target="125" data-prefix="" data-suffix="+">0</div>
+                    <div class="hud-label">LEADS PER PARTNER, YEAR ONE</div>
+                    <div class="hud-track"><div class="hud-fill" data-w="74"></div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== EXPERIENCE ===== -->
-    <section id="experience">
-        <div class="exp-inner">
-            <div class="eyebrow reveal">Experience</div>
-            <h2 class="section-title reveal">Where I've made an impact.</h2>
+    <section id="achievements">
+        <div class="sec-inner">
+            <div class="sec-header">
+                <p class="eyebrow mono">// ACHIEVEMENTS UNLOCKED</p>
+                <span class="ach-count mono">8 / 8</span>
+            </div>
+            <div class="ach-grid">
+                <div class="ach-card" data-tier="gold">
+                    <div class="ach-top"><span class="ach-emoji">💰</span><span class="ach-tier">GOLD</span></div>
+                    <div class="ach-name">Revenue Machine</div>
+                    <div class="ach-desc">Scaled a vendor program from $0 to $2M in recurring annual revenue.</div>
+                    <div class="ach-xp mono">+2000 XP</div>
+                </div>
+                <div class="ach-card" data-tier="gold">
+                    <div class="ach-top"><span class="ach-emoji">🤝</span><span class="ach-tier">GOLD</span></div>
+                    <div class="ach-name">Network Effect</div>
+                    <div class="ach-desc">Built 45 vendor partnerships completely from scratch.</div>
+                    <div class="ach-xp mono">+1500 XP</div>
+                </div>
+                <div class="ach-card" data-tier="gold">
+                    <div class="ach-top"><span class="ach-emoji">🎤</span><span class="ach-tier">GOLD</span></div>
+                    <div class="ach-name">Event Lord</div>
+                    <div class="ach-desc">Generated $550K+ per conference in sponsorship and booth sales.</div>
+                    <div class="ach-xp mono">+1500 XP</div>
+                </div>
+                <div class="ach-card" data-tier="silver">
+                    <div class="ach-top"><span class="ach-emoji">📈</span><span class="ach-tier">SILVER</span></div>
+                    <div class="ach-name">Lead Gen Legend</div>
+                    <div class="ach-desc">Drove 125+ new leads per partner in year one via email, social, podcast & webinar.</div>
+                    <div class="ach-xp mono">+1200 XP</div>
+                </div>
+                <div class="ach-card" data-tier="silver">
+                    <div class="ach-top"><span class="ach-emoji">✍️</span><span class="ach-tier">SILVER</span></div>
+                    <div class="ach-name">The Closer</div>
+                    <div class="ach-desc">Wrote, redlined, and negotiated 40+ vendor contracts to close.</div>
+                    <div class="ach-xp mono">+1000 XP</div>
+                </div>
+                <div class="ach-card" data-tier="silver">
+                    <div class="ach-top"><span class="ach-emoji">🖥️</span><span class="ach-tier">SILVER</span></div>
+                    <div class="ach-name">Platform Whisperer</div>
+                    <div class="ach-desc">Led Salesforce CRM for years; oversaw flawless data migration at its 2025 sunset.</div>
+                    <div class="ach-xp mono">+800 XP</div>
+                </div>
+                <div class="ach-card" data-tier="bronze">
+                    <div class="ach-top"><span class="ach-emoji">🚀</span><span class="ach-tier">BRONZE</span></div>
+                    <div class="ach-name">Launch Crew</div>
+                    <div class="ach-desc">QA'd ARIVE to launch, putting it in the hands of 1,000+ mortgage brokers day one.</div>
+                    <div class="ach-xp mono">+600 XP</div>
+                </div>
+                <div class="ach-card" data-tier="special">
+                    <div class="ach-top"><span class="ach-emoji">🤖</span><span class="ach-tier">SPECIAL</span></div>
+                    <div class="ach-name">AI Powered</div>
+                    <div class="ach-desc">Built this entire website with AI. Uses generative AI daily to move faster and think bigger.</div>
+                    <div class="ach-xp mono">+∞ XP</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="exp-card reveal">
-                <div class="exp-head">
+    <section id="quests">
+        <div class="sec-inner">
+            <p class="eyebrow mono">// QUEST LOG</p>
+            <div class="quest reveal">
+                <div class="quest-head">
                     <div>
-                        <div class="exp-co">AIME Group</div>
-                        <div class="exp-role">Partnership Development Manager</div>
-                        <div class="exp-prev">Previously: Partnership Development Coordinator</div>
+                        <span class="quest-type main">MAIN QUEST</span>
+                        <div class="quest-co">AIME Group</div>
+                        <div class="quest-role">Partnership Development Manager <span class="quest-prev">↑ promoted from Coordinator</span></div>
                     </div>
-                    <div class="exp-meta">
-                        <div class="exp-date">Jan 2022 — Present</div>
-                        <div class="exp-tenure">6+ years total</div>
+                    <div class="quest-meta">
+                        <div class="quest-date mono">Jan 2022 — Present</div>
+                        <div class="xp-badge mono">+6,800 XP</div>
                     </div>
                 </div>
-                <ul class="bullets">
-                    <li>Built AIME's vendor program from <strong>zero to 45 active partners</strong>, generating <strong>$2M in recurring annual revenue</strong> through affiliate marketing and sponsorships.</li>
-                    <li>Established 40+ new vendor relationships offering discounted services, revenue share arrangements, or five-figure annual partnerships.</li>
-                    <li>Led exhibitor and sponsorship sales for AIME's <strong>1,000+ attendee annual conference</strong>, generating <strong>$550K+ per event</strong> through strategic activations.</li>
-                    <li>Developed custom marketing campaigns driving <strong>125+ new leads per vendor in year one</strong> across email, social media, podcast, and webinar channels.</li>
-                    <li>Managed $500K+ in annual vendor invoices and owned end-to-end contract negotiation, partner onboarding, and CRM operations in Salesforce.</li>
-                    <li>Served as lead internal Salesforce resource, overseeing an accurate, seamless data migration when the platform was sunset in 2025.</li>
+                <ul class="objectives">
+                    <li><span class="check">✓</span>Built vendor program zero → 45 partners → <strong>$2M annual revenue</strong></li>
+                    <li><span class="check">✓</span>Led annual conference sponsorship sales → <strong>$550K+ per event</strong></li>
+                    <li><span class="check">✓</span>Created campaigns driving <strong>125+ leads per partner, year one</strong> across email, social, podcast &amp; webinar</li>
+                    <li><span class="check">✓</span>Wrote, redlined &amp; closed <strong>40+ vendor contracts</strong>; created AIME's first-ever vendor membership program</li>
+                    <li><span class="check">✓</span>Managed <strong>$500K+ in annual vendor invoices</strong> and owned end-to-end partner operations</li>
                 </ul>
             </div>
-
-            <div class="exp-card reveal">
-                <div class="exp-head">
+            <div class="quest reveal">
+                <div class="quest-head">
                     <div>
-                        <div class="exp-co">ARIVE</div>
-                        <div class="exp-role">Business Analyst</div>
+                        <span class="quest-type side">SIDE QUEST</span>
+                        <div class="quest-co">ARIVE</div>
+                        <div class="quest-role">Business Analyst</div>
                     </div>
-                    <div class="exp-meta">
-                        <div class="exp-date">Nov 2018 — Nov 2019</div>
+                    <div class="quest-meta">
+                        <div class="quest-date mono">Nov 2018 — Nov 2019</div>
+                        <div class="xp-badge mono">+1,200 XP</div>
                     </div>
                 </div>
-                <ul class="bullets">
-                    <li>Led QA and user acceptance testing across ARIVE's full platform — Salesforce CRM, Loan Origination Software, and Pricing Engine — driving launch to <strong>1,000+ mortgage brokers</strong>.</li>
-                    <li>Provided live broker support via Kibana data logs, diagnosing and resolving loan registration failures that processed <strong>millions in loan volume</strong>.</li>
+                <ul class="objectives">
+                    <li><span class="check">✓</span>Led QA &amp; UAT for Salesforce CRM, Loan Origination Software, and Pricing Engine → launch to <strong>1,000+ mortgage brokers</strong></li>
+                    <li><span class="check">✓</span>Provided live broker support via Kibana logs, enabling <strong>millions in loan volume</strong></li>
                 </ul>
             </div>
-
-            <div class="edu-card reveal">
-                <div class="exp-head">
+            <div class="quest reveal origin">
+                <div class="quest-head">
                     <div>
-                        <div class="exp-co">Drexel University</div>
-                        <div class="exp-role">BS, Sport Management &nbsp;·&nbsp; Minors: Business Administration, Marketing</div>
+                        <span class="quest-type origin-t">ORIGIN STORY</span>
+                        <div class="quest-co">Drexel University</div>
+                        <div class="quest-role">BS Sport Management &nbsp;·&nbsp; Business Administration &nbsp;·&nbsp; Marketing</div>
                     </div>
-                    <div class="exp-meta">
-                        <div class="exp-date">Philadelphia, PA</div>
+                    <div class="quest-meta">
+                        <div class="quest-date mono">Philadelphia, PA</div>
+                        <div class="xp-badge mono">UNLOCKED</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== SKILLS ===== -->
     <section id="skills">
-        <div class="skills-inner reveal">
-            <div class="eyebrow">Skills</div>
-            <h2 class="section-title">What I bring to the table.</h2>
-            <div class="skills-grid">
-                <div class="skill-group">
-                    <div class="skill-cat">Business Development</div>
-                    <div class="tags">
-                        <span>Contract Negotiation</span>
-                        <span>Redlining</span>
-                        <span>Sponsorship Activation</span>
-                        <span>Partnership Strategy</span>
-                        <span>Revenue Share Programs</span>
-                        <span>Vendor Onboarding</span>
+        <div class="sec-inner">
+            <p class="eyebrow mono">// SKILL TREE</p>
+            <div class="skill-tree reveal">
+                <div class="skill-branch">
+                    <div class="branch-label mono">BUSINESS DEVELOPMENT</div>
+                    <div class="skill-list">
+                        <div class="skill-row"><span class="skill-name">Contract Negotiation</span><div class="skill-track"><div class="skill-fill" data-w="95"></div></div><span class="skill-val mono">95</span></div>
+                        <div class="skill-row"><span class="skill-name">Sponsorship Sales</span><div class="skill-track"><div class="skill-fill" data-w="92"></div></div><span class="skill-val mono">92</span></div>
+                        <div class="skill-row"><span class="skill-name">Partnership Strategy</span><div class="skill-track"><div class="skill-fill" data-w="90"></div></div><span class="skill-val mono">90</span></div>
+                        <div class="skill-row"><span class="skill-name">Revenue Programs</span><div class="skill-track"><div class="skill-fill" data-w="88"></div></div><span class="skill-val mono">88</span></div>
                     </div>
                 </div>
-                <div class="skill-group">
-                    <div class="skill-cat">Marketing</div>
-                    <div class="tags">
-                        <span>Email Campaigns</span>
-                        <span>Social Media</span>
-                        <span>Copywriting</span>
-                        <span>Graphic Design</span>
-                        <span>Podcast Advertising</span>
-                        <span>Webinars</span>
-                        <span>Lead Generation</span>
+                <div class="skill-branch">
+                    <div class="branch-label mono">MARKETING</div>
+                    <div class="skill-list">
+                        <div class="skill-row"><span class="skill-name">Email Campaigns</span><div class="skill-track"><div class="skill-fill" data-w="94"></div></div><span class="skill-val mono">94</span></div>
+                        <div class="skill-row"><span class="skill-name">Copywriting</span><div class="skill-track"><div class="skill-fill" data-w="88"></div></div><span class="skill-val mono">88</span></div>
+                        <div class="skill-row"><span class="skill-name">Social Media</span><div class="skill-track"><div class="skill-fill" data-w="85"></div></div><span class="skill-val mono">85</span></div>
+                        <div class="skill-row"><span class="skill-name">Lead Generation</span><div class="skill-track"><div class="skill-fill" data-w="91"></div></div><span class="skill-val mono">91</span></div>
                     </div>
                 </div>
-                <div class="skill-group">
-                    <div class="skill-cat">Tools & Platforms</div>
-                    <div class="tags">
-                        <span>Salesforce CRM</span>
-                        <span>QuickBooks</span>
-                        <span>Monday.com</span>
-                        <span>Stripe</span>
-                        <span>Canva</span>
-                        <span>Generative AI</span>
-                        <span>Google Workspace</span>
-                        <span>Microsoft Office</span>
+                <div class="skill-branch">
+                    <div class="branch-label mono">TOOLS & PLATFORMS</div>
+                    <div class="skill-list">
+                        <div class="skill-row"><span class="skill-name">Salesforce CRM</span><div class="skill-track"><div class="skill-fill" data-w="86"></div></div><span class="skill-val mono">86</span></div>
+                        <div class="skill-row"><span class="skill-name">Generative AI</span><div class="skill-track"><div class="skill-fill" data-w="93"></div></div><span class="skill-val mono">93</span></div>
+                        <div class="skill-row"><span class="skill-name">QuickBooks / Stripe</span><div class="skill-track"><div class="skill-fill" data-w="80"></div></div><span class="skill-val mono">80</span></div>
+                        <div class="skill-row"><span class="skill-name">Monday / Canva</span><div class="skill-track"><div class="skill-fill" data-w="87"></div></div><span class="skill-val mono">87</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
     <section id="contact">
-        <div class="contact-inner reveal">
-            <div class="eyebrow light">Contact</div>
-            <h2 class="contact-hl">Let's build<br>something together.</h2>
-            <p class="contact-sub">Open to partnership development, business development, and strategic growth roles.</p>
-            <div class="contact-list">
-                <a href="mailto:BennettSchiff820@gmail.com" class="contact-row">
-                    <span class="contact-label">Email</span>
-                    <span class="contact-val">BennettSchiff820@gmail.com &rarr;</span>
-                </a>
-                <a href="https://www.linkedin.com/in/Bennett-Schiff" target="_blank" rel="noopener" class="contact-row">
-                    <span class="contact-label">LinkedIn</span>
-                    <span class="contact-val">linkedin.com/in/Bennett-Schiff &rarr;</span>
-                </a>
+        <div class="sec-inner">
+            <div class="contact-wrap reveal">
+                <p class="eyebrow mono dim">// FINAL BOSS UNLOCKED</p>
+                <h2 class="contact-hl">Ready for your<br>next challenge?</h2>
+                <p class="contact-sub">Open to partnership development, business development, and strategic growth roles. I bring revenue, relationships, and results.</p>
+                <div class="contact-rows">
+                    <a href="mailto:BennettSchiff820@gmail.com" class="contact-row">
+                        <span class="cr-num mono">01</span>
+                        <span class="cr-label">EMAIL</span>
+                        <span class="cr-val">BennettSchiff820@gmail.com &rarr;</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/Bennett-Schiff" target="_blank" rel="noopener" class="contact-row">
+                        <span class="cr-num mono">02</span>
+                        <span class="cr-label">LINKEDIN</span>
+                        <span class="cr-val">linkedin.com/in/Bennett-Schiff &rarr;</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-inner">
-            <span>&copy; 2025 Bennett Schiff</span>
-            <span>Philadelphia, PA</span>
+        <div class="foot-inner">
+            <span class="mono">© 2025 BENNETT SCHIFF</span>
+            <span class="mono">BUILT WITH AI &nbsp;·&nbsp; PHILADELPHIA, PA</span>
         </div>
     </footer>
 
