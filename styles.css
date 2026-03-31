@@ -126,11 +126,12 @@ button {
     inset: 0;
     z-index: 20;
     display: grid;
-    place-items: center;
+    place-items: end center;
     padding: var(--pad);
     background:
-        radial-gradient(circle at center, rgba(var(--accent-rgb), 0.18), transparent 25%),
-        linear-gradient(180deg, rgba(23, 12, 8, 0.92), rgba(7, 5, 4, 0.95));
+        radial-gradient(circle at 50% 20%, rgba(190, 224, 255, 0.12), transparent 22%),
+        linear-gradient(180deg, #091119 0%, #101822 34%, #172432 64%, #0f171f 100%);
+    overflow: hidden;
     transition: opacity 1s ease, visibility 1s ease;
 }
 
@@ -155,100 +156,197 @@ button {
     color: rgba(255, 246, 239, 0.72);
 }
 
-.door-button {
-    border: 0;
-    background: transparent;
-    cursor: pointer;
-    transition: transform 0.35s ease;
-}
-
-.door-button:hover {
-    transform: translateY(-4px) scale(1.01);
-}
-
-.door-frame {
-    position: relative;
-    display: block;
-    width: min(36rem, 82vw);
-    aspect-ratio: 0.78;
-    border-radius: 18rem 18rem 1.6rem 1.6rem;
-    overflow: hidden;
-    border: 1px solid rgba(255, 236, 224, 0.18);
-    box-shadow: 0 50px 130px rgba(0, 0, 0, 0.5);
-    background:
-        radial-gradient(circle at center, rgba(255, 230, 188, 0.85), rgba(255, 184, 79, 0.4) 24%, rgba(24, 9, 5, 0.2) 48%, rgba(15, 9, 6, 0.96) 78%);
-}
-
-.door-panel {
+.portal-sky,
+.portal-moon,
+.portal-path,
+.forest-layer {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 50%;
-    background:
-        linear-gradient(180deg, rgba(109, 60, 35, 0.92), rgba(57, 25, 14, 0.95)),
-        linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
-    border: 1px solid rgba(255, 214, 188, 0.08);
-    transition: transform 1.25s cubic-bezier(0.2, 1, 0.22, 1);
-    transform-style: preserve-3d;
+    inset: 0;
 }
 
-.door-panel::before,
-.door-panel::after {
+.portal-sky {
+    background:
+        radial-gradient(circle at 50% 18%, rgba(235, 245, 255, 0.12), transparent 18%),
+        radial-gradient(circle at 15% 12%, rgba(255, 255, 255, 0.1) 0 1px, transparent 2px),
+        radial-gradient(circle at 76% 16%, rgba(255, 255, 255, 0.08) 0 1px, transparent 2px),
+        radial-gradient(circle at 58% 10%, rgba(255, 255, 255, 0.08) 0 1px, transparent 2px);
+    opacity: 0.9;
+}
+
+.portal-moon {
+    inset: 10% auto auto 50%;
+    width: clamp(6rem, 10vw, 10rem);
+    height: clamp(6rem, 10vw, 10rem);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle at 35% 35%, #fff9eb, #dbcfc4 65%, rgba(255, 255, 255, 0.1) 100%);
+    box-shadow: 0 0 80px rgba(255, 247, 220, 0.18);
+}
+
+.portal-path {
+    inset: auto 50% -8% 50%;
+    width: min(36rem, 70vw);
+    height: 72vh;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, rgba(232, 214, 182, 0) 0%, rgba(232, 214, 182, 0.14) 40%, rgba(232, 214, 182, 0.68) 100%);
+    clip-path: polygon(46% 0, 54% 0, 88% 100%, 12% 100%);
+    filter: blur(2px);
+}
+
+.forest-layer {
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    background-size: auto 100%;
+    transition:
+        transform 1.2s cubic-bezier(0.2, 1, 0.22, 1),
+        opacity 1.2s ease,
+        filter 1.2s ease;
+}
+
+.forest-back {
+    opacity: 0.5;
+    background-image:
+        radial-gradient(circle at 10% 100%, #182734 0 6rem, transparent 6.2rem),
+        radial-gradient(circle at 20% 100%, #182734 0 4.4rem, transparent 4.6rem),
+        radial-gradient(circle at 34% 100%, #182734 0 5.5rem, transparent 5.7rem),
+        radial-gradient(circle at 48% 100%, #182734 0 4.6rem, transparent 4.8rem),
+        radial-gradient(circle at 66% 100%, #182734 0 6.5rem, transparent 6.7rem),
+        radial-gradient(circle at 82% 100%, #182734 0 5.1rem, transparent 5.3rem);
+}
+
+.forest-mid {
+    opacity: 0.82;
+    background-image:
+        linear-gradient(transparent 0 58%, #101720 58% 100%),
+        radial-gradient(circle at 8% 86%, #0f161d 0 8rem, transparent 8.2rem),
+        radial-gradient(circle at 26% 92%, #0f161d 0 6rem, transparent 6.2rem),
+        radial-gradient(circle at 48% 89%, #0f161d 0 8rem, transparent 8.2rem),
+        radial-gradient(circle at 72% 90%, #0f161d 0 7rem, transparent 7.2rem),
+        radial-gradient(circle at 92% 86%, #0f161d 0 8rem, transparent 8.2rem);
+}
+
+.forest-front {
+    opacity: 1;
+    background:
+        linear-gradient(180deg, transparent 0 50%, #081015 50% 100%);
+}
+
+.forest-front::before,
+.forest-front::after {
     content: "";
     position: absolute;
-    inset: 1.5rem;
-    border: 1px solid rgba(255, 228, 208, 0.08);
-    border-radius: 11rem 11rem 0.9rem 0.9rem;
+    top: -10%;
+    bottom: -10%;
+    width: 50%;
+    background:
+        linear-gradient(180deg, transparent 0 10%, #081015 10% 100%),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0 4%,
+            rgba(8, 16, 21, 0.98) 4% 10%,
+            transparent 10% 16%
+        );
+    filter: blur(0.4px);
+    transition: transform 1.3s cubic-bezier(0.2, 1, 0.22, 1);
 }
 
-.door-panel::after {
-    inset: auto 1.5rem 1.5rem;
-    top: 52%;
-    border-radius: 0.9rem;
-}
-
-.door-panel.left {
+.forest-front::before {
     left: 0;
     transform-origin: left center;
 }
 
-.door-panel.right {
+.forest-front::after {
     right: 0;
     transform-origin: right center;
+    transform: scaleX(-1);
 }
 
-.portal.is-opening .door-panel.left {
-    transform: perspective(1200px) rotateY(-108deg);
+.enter-button {
+    position: relative;
+    z-index: 2;
+    margin-bottom: clamp(2.5rem, 8vh, 5rem);
+    border: 0;
+    background: transparent;
+    color: #f5f1e9;
+    cursor: pointer;
+    padding: 1rem 1.4rem;
+    transition: transform 0.35s ease;
 }
 
-.portal.is-opening .door-panel.right {
-    transform: perspective(1200px) rotateY(108deg);
+.enter-button:hover {
+    transform: translateY(-4px);
 }
 
-.door-center {
-    position: absolute;
-    inset: 0;
+.enter-label {
+    position: relative;
     z-index: 1;
-    display: grid;
-    place-items: center;
-    align-content: center;
-    gap: 0.55rem;
-    padding: 2rem;
-    color: #fff5ef;
-    text-align: center;
-}
-
-.door-label {
+    display: inline-block;
     font-family: var(--serif);
-    font-size: clamp(2.6rem, 6vw, 4.6rem);
-    line-height: 0.92;
+    font-size: clamp(2rem, 4.4vw, 3.4rem);
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-shadow: 0 0 22px rgba(255, 235, 191, 0.6);
 }
 
-.door-sub {
+.enter-glow {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    width: 10rem;
+    height: 3.5rem;
+    transform: translate(-50%, -50%);
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(255, 226, 150, 0.42), rgba(255, 226, 150, 0.05) 65%, transparent 75%);
+    filter: blur(6px);
+}
+
+.portal.is-opening .forest-back {
+    transform: scale(1.18);
+    opacity: 0.25;
+    filter: blur(4px);
+}
+
+.portal.is-opening .forest-mid {
+    transform: scale(1.35);
+    opacity: 0.15;
+    filter: blur(8px);
+}
+
+.portal.is-opening .forest-front::before {
+    transform: translateX(-85%) skewY(2deg);
+}
+
+.portal.is-opening .forest-front::after {
+    transform: scaleX(-1) translateX(-85%) skewY(-2deg);
+}
+
+.portal.is-opening .portal-path {
+    transform: translateX(-50%) scaleY(1.25);
+    opacity: 0.4;
+}
+
+.hero-name {
+    opacity: 0;
+    transform: translateY(26px) scale(0.98);
+    transition: opacity 0.95s ease 0.2s, transform 0.95s ease 0.2s;
+}
+
+.hero-role {
+    margin-top: 0.9rem;
     font-size: 0.95rem;
-    letter-spacing: 0.08em;
+    font-weight: 800;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(255, 245, 239, 0.78);
+    color: var(--accent);
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.95s ease 0.32s, transform 0.95s ease 0.32s;
+}
+
+body.portal-open .hero-name,
+body.portal-open .hero-role {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 .site-nav {
