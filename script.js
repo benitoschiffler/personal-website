@@ -95,7 +95,8 @@ const revealObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.16, rootMargin: "0px 0px -40px 0px" });
 
-document.querySelectorAll(".reveal").forEach((element) => {
+// Room cards handled separately by Anime.js below
+document.querySelectorAll(".reveal:not(.room-card)").forEach((element) => {
     revealObserver.observe(element);
 });
 
@@ -183,4 +184,63 @@ if (cursorGlow && !prefersReducedMotion) {
 
 if (prefersReducedMotion) {
     openPortal();
+}
+
+// ============================================
+// ANIME.JS — Hero name character animation
+// ============================================
+function animateHeroName() {
+    if (prefersReducedMotion) return;
+
+    const el = document.querySelector(".hero-name");
+    if (!el) return;
+
+    const text = el.textContent.trim();
+    el.innerHTML = text
+        .split("")
+        .map(char => `<span class="char" style="display:inline-block;white-space:pre">${char}</span>`)
+        .join("");
+
+    anime.animate(".hero-name .char", {
+        translateY: ["1.1em", 0],
+        opacity: [0, 1],
+        delay: anime.stagger(38, { start: 80 }),
+        duration: 1000,
+        easing: "spring(1, 72, 9, 0)"
+    });
+}
+
+// Trigger after portal finishes opening (1150ms transition + small buffer)
+if (doorButton) {
+    doorButton.addEventListener("click", () => {
+        setTimeout(animateHeroName, 1300);
+    });
+}
+
+// ============================================
+// ANIME.JS — Room cards staggered entrance
+// ============================================
+const roomsGrid = document.querySelector(".rooms-grid");
+
+if (roomsGrid) {
+    if (prefersReducedMotion) {
+        roomsGrid.querySelectorAll(".room-card").forEach(c => c.classList.add("visible"));
+    } else {
+        const roomObs = new IntersectionObserver((entries) => {
+            if (!entries[0].isIntersecting) return;
+
+            anime.animate(".room-card", {
+                translateY: [56, 0],
+                opacity: [0, 1],
+                scale: [0.97, 1],
+                delay: anime.stagger(110),
+                duration: 800,
+                easing: "spring(1, 88, 12, 0)"
+            });
+
+            roomObs.unobserve(roomsGrid);
+        }, { threshold: 0.08 });
+
+        roomObs.observe(roomsGrid);
+    }
 }
