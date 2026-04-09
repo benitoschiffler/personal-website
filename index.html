@@ -3,242 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bennett Schiff | Come On In</title>
-    <meta name="description" content="An interactive personal site for Bennett Schiff. Open the door, explore the rooms, and get a feel for how he thinks and builds.">
+    <title>Bennett Schiff</title>
+    <meta name="description" content="Bennett Schiff — Partnership Development Manager, Philadelphia PA">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="grain"></div>
-    <div class="cursor-glow" id="cursorGlow"></div>
 
-    <div class="portal" id="portal" aria-hidden="false">
-        <div class="portal-sky"></div>
-        <div class="portal-moon"></div>
-        <div class="forest-layer forest-back"></div>
-        <div class="forest-layer forest-mid"></div>
-        <div class="forest-layer forest-front"></div>
-        <div class="portal-path"></div>
-        <div class="portal-copy">
-            <p class="eyebrow">Personal site / cinematic intro</p>
-            <p class="portal-note">A short walk through the woods before you get to the actual site.</p>
-        </div>
-        <button class="enter-button" id="doorButton" aria-label="Enter Bennett Schiff's website">
-            <span class="enter-label">Enter</span>
-            <span class="enter-glow"></span>
-        </button>
-    </div>
+    <!-- Particle field -->
+    <canvas id="field"></canvas>
 
-    <nav class="site-nav" id="siteNav">
-        <a href="#landing" class="brand">BS</a>
-        <div class="nav-links">
-            <a href="#rooms">Rooms</a>
-            <a href="#signals">Signals</a>
-            <a href="#story">Story</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
+    <!-- Atmospheric orbs — follow cursor at different lag -->
+    <div class="orb" id="orb-a"></div>
+    <div class="orb" id="orb-b"></div>
+    <div class="orb" id="orb-c"></div>
 
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#landing" class="mob-link">Landing</a>
-        <a href="#rooms" class="mob-link">Rooms</a>
-        <a href="#signals" class="mob-link">Signals</a>
-        <a href="#story" class="mob-link">Story</a>
-        <a href="#contact" class="mob-link">Contact</a>
-    </div>
-
-    <main>
-        <section class="landing" id="landing">
-            <div class="landing-copy reveal">
-                <p class="eyebrow">Welcome inside</p>
-                <h1 class="hero-name">Bennett Schiff</h1>
-                <p class="hero-role">Partnerships, growth, systems, and ideas that move.</p>
-                <p class="landing-text">
-                    I did not want a website that reads like a cover letter wearing nicer shoes.
-                    I wanted something a little weirder, warmer, and more memorable. So this is less
-                    "here are my bullet points" and more "walk around, click things, get a feel for me."
-                </p>
-                <div class="landing-actions">
-                    <a href="#rooms" class="btn btn-primary">Explore the rooms</a>
-                    <a href="#contact" class="btn btn-secondary">Skip to contact</a>
-                </div>
-            </div>
-
-            <div class="scene-card reveal">
-                <p class="scene-kicker">Current operating mode</p>
-                <div class="scene-line"><span>Role energy</span><strong>Partnerships, growth, builder brain</strong></div>
-                <div class="scene-line"><span>Base of operations</span><strong>Philadelphia, PA</strong></div>
-                <div class="scene-line"><span>Reputation</span><strong>Turns "we should do something" into revenue</strong></div>
-                <div class="scene-line"><span>Site thesis</span><strong>Fun first, resume second</strong></div>
-            </div>
-
-            <div class="landing-orbit" aria-hidden="true">
-                <span class="orbit-ring ring-a"></span>
-                <span class="orbit-ring ring-b"></span>
-                <span class="orbit-ring ring-c"></span>
-            </div>
-        </section>
-
-        <section class="section rooms-section" id="rooms">
-            <div class="section-heading reveal">
-                <p class="eyebrow">Four rooms, four signals</p>
-                <h2>If you want the vibe quickly, start here.</h2>
-                <p>Each room is a more human version of what would normally be a resume section.</p>
-            </div>
-
-            <div class="rooms-grid">
-                <article class="room-card reveal tilt-card" data-tilt-card>
-                    <p class="room-index">01</p>
-                    <h3>The Deal Room</h3>
-                    <p>I like finding overlap, shaping the story, and getting two sides excited to work together.</p>
-                    <ul>
-                        <li>Built a vendor program from zero to $2M+ annual revenue</li>
-                        <li>Closed sponsorships, partnerships, and affiliate campaigns</li>
-                        <li>Persistently follows up without becoming a menace</li>
-                    </ul>
-                </article>
-
-                <article class="room-card reveal tilt-card" data-tilt-card>
-                    <p class="room-index">02</p>
-                    <h3>The Builder Room</h3>
-                    <p>I am happiest when someone hands me a blank page and says, "Can you make this real?"</p>
-                    <ul>
-                        <li>Writes the process while building the program</li>
-                        <li>Comfortable owning strategy and the messy execution layer</li>
-                        <li>Will absolutely make the follow-up system better</li>
-                    </ul>
-                </article>
-
-                <article class="room-card reveal tilt-card" data-tilt-card>
-                    <p class="room-index">03</p>
-                    <h3>The Systems Room</h3>
-                    <p>Partnerships are people work, but they break if the backend is chaos. I like fixing both.</p>
-                    <ul>
-                        <li>Salesforce lead when that became necessary</li>
-                        <li>QA, operations, and process tuning experience</li>
-                        <li>Uses AI to delete repetitive admin work from existence</li>
-                    </ul>
-                </article>
-
-                <article class="room-card reveal tilt-card" data-tilt-card>
-                    <p class="room-index">04</p>
-                    <h3>The Wildcard Room</h3>
-                    <p>I value good taste, humor, and making things more delightful than they strictly need to be.</p>
-                    <ul>
-                        <li>Built this instead of sending another bland site</li>
-                        <li>Likes concept-driven outreach and memorable experiences</li>
-                        <li>Probably overthinks typography in a healthy way</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <section class="section signals-section" id="signals">
-            <div class="section-heading reveal">
-                <p class="eyebrow">Live signals</p>
-                <h2>The numbers are still here. They just live in a better room now.</h2>
-            </div>
-
-            <div class="signal-board reveal">
-                <div class="signal-tile">
-                    <span class="signal-value" data-count="2000000" data-prefix="$" data-suffix="+">$0</span>
-                    <span class="signal-label">grown into annual vendor revenue</span>
-                </div>
-                <div class="signal-tile">
-                    <span class="signal-value" data-count="45">0</span>
-                    <span class="signal-label">active vendor partnerships built</span>
-                </div>
-                <div class="signal-tile">
-                    <span class="signal-value" data-count="550000" data-prefix="$" data-suffix="+">$0</span>
-                    <span class="signal-label">generated per annual conference</span>
-                </div>
-                <div class="signal-tile">
-                    <span class="signal-value" data-count="125" data-suffix="+">0</span>
-                    <span class="signal-label">new leads delivered per partner in year one</span>
-                </div>
-            </div>
-
-            <div class="control-panel reveal">
-                <div class="panel-copy">
-                    <p class="eyebrow">Atmosphere controls</p>
-                    <h3>Change the mood of the house.</h3>
-                    <p>This does not improve my qualifications, but it does make the site feel alive, which is the point.</p>
-                </div>
-                <div class="theme-switches" role="group" aria-label="Color theme controls">
-                    <button class="theme-switch active" data-theme="sunset">Sunset</button>
-                    <button class="theme-switch" data-theme="aurora">Aurora</button>
-                    <button class="theme-switch" data-theme="nightshift">Night Shift</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="section story-section" id="story">
-            <div class="section-heading reveal">
-                <p class="eyebrow">Breadcrumb trail</p>
-                <h2>A quick path through the things that shaped how I work.</h2>
-            </div>
-
-            <div class="story-line">
-                <article class="story-stop reveal">
-                    <span class="story-year">2018</span>
-                    <div>
-                        <h3>ARIVE</h3>
-                        <p>Worked across QA, product support, and launch operations for a fintech platform rolling out to 1,000+ mortgage brokers.</p>
-                    </div>
-                </article>
-
-                <article class="story-stop reveal">
-                    <span class="story-year">2019</span>
-                    <div>
-                        <h3>AIME Group</h3>
-                        <p>Joined in a coordinator role, then kept saying yes to bigger problems until the work expanded into partnerships, systems, campaigns, and revenue growth.</p>
-                    </div>
-                </article>
-
-                <article class="story-stop reveal">
-                    <span class="story-year">2022</span>
-                    <div>
-                        <h3>Promotion and scale</h3>
-                        <p>Formal title caught up with the job: Partnership Development Manager. Vendor program, contracts, campaigns, conferences, partner growth, all in motion.</p>
-                    </div>
-                </article>
-
-                <article class="story-stop reveal">
-                    <span class="story-year">Now</span>
-                    <div>
-                        <h3>Looking for the next build</h3>
-                        <p>I’m most excited by roles where relationships, creativity, and commercial thinking actually matter and where there’s room to make something bigger than what existed before.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="section contact-section" id="contact">
-            <div class="contact-panel reveal">
-                <p class="eyebrow">Knock, knock</p>
-                <h2>If this felt like the kind of energy your team could use, let’s talk.</h2>
-                <p>
-                    Open to partnership development, business development, and strategic growth roles.
-                    Also open to conversations that start with, "This role isn't exactly that, but I think you'd like it."
-                </p>
-                <div class="contact-links">
-                    <a href="mailto:BennettSchiff820@gmail.com" class="contact-link">BennettSchiff820@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/Bennett-Schiff" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
-                </div>
-            </div>
-        </section>
+    <!-- Content -->
+    <main class="content">
+        <h1 class="name" id="heroName">
+            <span class="name-line" id="line1">BENNETT</span>
+            <span class="name-line" id="line2">SCHIFF</span>
+        </h1>
+        <p class="role">Partnership Development Manager</p>
+        <p class="location">Philadelphia, PA</p>
+        <nav class="links">
+            <a href="mailto:BennettSchiff820@gmail.com" class="link">Email →</a>
+            <a href="https://www.linkedin.com/in/Bennett-Schiff" target="_blank" rel="noopener" class="link">LinkedIn →</a>
+        </nav>
     </main>
 
-    <footer class="site-footer">
-        <p>Designed as an experience, not a document.</p>
-        <p>© 2026 Bennett Schiff</p>
-    </footer>
+    <p class="hint" id="hint">Move your mouse</p>
 
     <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
     <script src="script.js"></script>
