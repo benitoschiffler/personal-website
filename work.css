@@ -57,14 +57,6 @@ body.work-body {
     margin-bottom: 0.6rem;
 }
 
-.work-subtitle {
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 3rem;
-}
 
 /* ── Year tabs ── */
 .year-tabs {
@@ -116,6 +108,10 @@ body.work-body {
     text-transform: uppercase;
     color: var(--muted);
     margin: 1.75rem 0 1.5rem;
+}
+
+.venue-label {
+    color: var(--text);
 }
 
 /* ── Photo grid ── */
