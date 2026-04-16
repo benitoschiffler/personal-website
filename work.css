@@ -1,0 +1,229 @@
+/* ─────────────────────────────────────────────
+   work.css — gallery page overrides & layout
+   ───────────────────────────────────────────── */
+
+/* Allow scrolling (styles.css locks overflow: hidden) */
+html,
+body.work-body {
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* ── Page wrapper ── */
+.work-wrap {
+    position: relative;
+    z-index: 10;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 2.5rem 7rem;
+}
+
+/* ── Back link ── */
+.work-header { margin-bottom: 3rem; }
+
+.back-link {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+    position: relative;
+}
+
+.back-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--text);
+    transition: width 0.25s ease;
+}
+
+.back-link:hover { color: var(--text); }
+.back-link:hover::after { width: 100%; }
+
+/* ── Page title ── */
+.work-title {
+    font-family: var(--serif);
+    font-size: clamp(3.25rem, 8vw, 6.5rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.6rem;
+}
+
+.work-subtitle {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 3rem;
+}
+
+/* ── Year tabs ── */
+.year-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--dim);
+    margin-bottom: 0;
+}
+
+.year-tab {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.55rem 1.5rem 0.65rem;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.year-tab::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--text);
+    transition: width 0.25s ease;
+}
+
+.year-tab.active,
+.year-tab:hover { color: var(--text); }
+.year-tab.active::after { width: 100%; }
+
+/* ── Year sections ── */
+.year-section { display: none; }
+.year-section.active { display: block; }
+
+/* ── Venue caption ── */
+.year-venue {
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 1.75rem 0 1.5rem;
+}
+
+/* ── Photo grid ── */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.photo {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 3px;
+    display: block;
+    filter: brightness(0.85) saturate(0.85);
+    transition: filter 0.35s ease, transform 0.35s ease;
+    position: relative;
+    z-index: 0;
+}
+
+.photo:hover {
+    filter: brightness(1.02) saturate(1);
+    transform: scale(1.03);
+    z-index: 1;
+}
+
+/* ── Lightbox ── */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(6, 8, 15, 0.96);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s ease;
+}
+
+.lightbox.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lb-img {
+    max-width: 88vw;
+    max-height: 86vh;
+    object-fit: contain;
+    border-radius: 3px;
+    opacity: 1;
+    transition: opacity 0.18s ease;
+    transform: scale(0.96);
+    transition: transform 0.28s ease, opacity 0.18s ease;
+}
+
+.lightbox.open .lb-img {
+    transform: scale(1);
+}
+
+.lb-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.75rem;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 2.2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 0.25rem;
+}
+
+.lb-close:hover { color: var(--text); }
+
+.lb-prev,
+.lb-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 3rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    transition: color 0.2s;
+    user-select: none;
+}
+
+.lb-prev:hover,
+.lb-next:hover { color: var(--text); }
+
+.lb-prev { left: 0.5rem; }
+.lb-next { right: 0.5rem; }
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+    .work-wrap { padding: 1.75rem 1.25rem 5rem; }
+    .photo-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .lb-prev { left: 0; padding: 1rem 0.75rem; }
+    .lb-next { right: 0; padding: 1rem 0.75rem; }
+}
+
+@media (max-width: 380px) {
+    .photo-grid { grid-template-columns: 1fr; }
+}

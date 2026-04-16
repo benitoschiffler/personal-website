@@ -172,6 +172,11 @@ body {
 .link:hover { color: var(--text); }
 .link:hover::after { width: 100%; }
 
+/* Icon-only link (LinkedIn) — no underline animation */
+.link-icon { display: inline-flex; align-items: center; }
+.link-icon::after { display: none; }
+.li-icon { width: 1em; height: 1em; vertical-align: middle; }
+
 /* ── Hint ── */
 .hint {
     position: fixed;
