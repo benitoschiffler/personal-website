@@ -1,0 +1,28 @@
+# Local tooling / agent config — never belongs in a public repo
+.claude/
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Dependencies & build output
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
